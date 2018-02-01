@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context="com.example.android.tipcalculator.MainActivity">
+
+   <TextView
+       android:id="@+id/title"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:text="@string/title"
+       android:textSize="40sp"
+       android:layout_marginBottom="50dp"/>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/split"
+        android:textSize="20sp"
+        android:layout_below="@id/title"/>
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_below="@id/checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bill_amount"/>
+
+        <EditText
+            android:id="@+id/bill_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/diners"/>
+
+        <EditText
+            android:id="@+id/diner_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="2"
+            android:inputType="number"/>
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear"
+        android:progress="10"
+        android:max="20"/>
+
+    <TextView
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/seek"
+        android:layout_marginBottom="50dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/tip_amount"
+        android:layout_below="@id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tip"
+            android:textSize="20sp"
+            android:layout_marginRight="50dp"
+
+            android:layout_marginBottom="50dp"/>
+
+        <TextView
+            android:id="@+id/tip_amountEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.00"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/owe_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tip_amount"
+        android:layout_marginBottom="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/owe"
+            android:textSize="20sp"
+            android:layout_below="@id/tip_amount"
+            android:layout_marginRight="75dp"/>
+
+        <TextView
+            android:id="@+id/owe_amountEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.00"/>
+    </LinearLayout>
+
+
+    <Button
+        android:layout_below="@id/owe_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonText"
+        android:layout_centerHorizontal="true"
+        android:onClick="buttonPressed"
+        />
+
+</RelativeLayout>

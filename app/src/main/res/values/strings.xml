@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TipCalculator</string>
+    <string name="title">Tip Calculator</string>
+    <string name="prompt">Please Select Tip Amount:</string>
+    <string name="bill_amount">What\'s the bill?</string>
+    <string name="diners">How many diners?</string>
+    <string name="split">Split the Bill?</string>
+    <string name="tip">Tip Amount:</string>
+    <string name="owe">You Owe:</string>
+    <string name="buttonText">Get Price</string>
+</resources>
